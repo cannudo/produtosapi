@@ -39,7 +39,7 @@ public class Produto { /* Isso é um POJO (Plain Old Java Object) */
     }
 
     public String toString(){
-        return "Produto #" + this.id + ": " + this.nome + "(" + this.descricao + ")" + "no valor de R$ " + this.preco;
+        return "Produto #" + this.id + ": " + this.nome + " (" + this.descricao + ") " + "no valor de R$ " + this.preco;
     }
 
 }
