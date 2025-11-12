@@ -1,6 +1,6 @@
 package io.github.cannudo.produtosapi.model;
 
-public class Produto {
+public class Produto { /* Isso é um POJO (Plain Old Java Object) */
     private String id;
     private String nome;
     private String descricao;
@@ -36,6 +36,10 @@ public class Produto {
 
     public void setPreco(Double preco) {
         this.preco = preco;
+    }
+
+    public String toString(){
+        return "Produto #" + this.id + ": " + this.nome + "(" + this.descricao + ")" + "no valor de R$ " + this.preco;
     }
 
 }
