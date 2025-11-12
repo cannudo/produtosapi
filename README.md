@@ -1,4 +1,6 @@
-Nesse commit, foi criada uma API.
+Nesse commit, o banco de dados h2 foi configurado.
 
-Fazendo uma requisição POST para `http://localhost:8080/produtos`, o código HTTP retornado é 200.
-Embora não seja nada demais, esse comportamento já comprova que a API funciona.
+Basta acessar `http://localhost:8080/h2-console`.
+
+- Usuário: sa
+- Senha: password
