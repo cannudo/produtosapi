@@ -8,4 +8,4 @@ Importante destacar que foi feito também um mapeamento entre esse arquivo e o m
 
 Ainda não existe persistência, mas também pode-se fazer um POST para `http://localhost:8080/produtos/` e se obter o JSON passado na requisição.
 
-Por fim, o Easter Egg do dia, porque embalou Ney embalou os pensamentos hoje.
+Por fim, o Easter Egg do dia, porque embalou Ney embalou os pensamentos hoje: `http://localhost:8080/produtos/ola-mundo/`
