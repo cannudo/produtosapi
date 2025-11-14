@@ -1,9 +1,25 @@
 package io.github.cannudo.produtosapi.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "produto")
 public class Produto { /* Isso é um POJO (Plain Old Java Object) */
+
+    @Id
+    @Column(name = "id")
     private String id;
+
+    @Column
     private String nome;
+
+    @Column
     private String descricao;
+
+    @Column
     private Double preco;
 
     public String getId() {
