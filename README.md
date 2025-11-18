@@ -1,11 +1,10 @@
-Os últimos commits configuraram o banco de dados h2, que é um banquinho em memória só pra desenvolvimento, tipo o SQLite no Django.
+Este commit criou uma interface "repository", que corresponde à etapa de interação com o banco de dados.
 
-O SGBD pode ser acessado através do endereço `http://localhost:8080/h2-console/` após rodar a aplicação.
+- Controller
+> Mapeamento de URLs e funcionalidades da API
 
-Além disso, existe um arquivo chamado `data.sql`, que executa alguns comandos SQL toda vez que a aplicação roda.
+- Model
+> Classes de modelo de negócios
 
-Importante destacar que foi feito também um mapeamento entre esse arquivo e o model `Produto.java`, usando algumas anotações.
-
-Ainda não existe persistência, mas também pode-se fazer um POST para `http://localhost:8080/produtos/` e se obter o JSON passado na requisição.
-
-Por fim, o Easter Egg do dia, porque embalou Ney embalou os pensamentos hoje: `http://localhost:8080/produtos/ola-mundo/`
+- Repository
+> Classes que manipulam o banco de dados

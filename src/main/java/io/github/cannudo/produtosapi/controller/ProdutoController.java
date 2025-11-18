@@ -1,14 +1,26 @@
 package io.github.cannudo.produtosapi.controller;
 
 import io.github.cannudo.produtosapi.model.Produto;
+import io.github.cannudo.produtosapi.repository.ProdutoRepository;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController
 @RequestMapping("produtos")
 public class ProdutoController {
 
+    public ProdutoController(ProdutoRepository produtoRepository) {
+        this.produtoRepository = produtoRepository;
+    }
+
+    private ProdutoRepository produtoRepository;
+
     @PostMapping
     public Produto salvar(@RequestBody Produto produto) {
+        var id = UUID.randomUUID().toString();
+        produto.setId(id);
+        produtoRepository.save(produto);
         return produto;
     }
 
