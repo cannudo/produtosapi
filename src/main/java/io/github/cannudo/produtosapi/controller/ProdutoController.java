@@ -31,6 +31,11 @@ public class ProdutoController {
         return produto.orElse(null);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteByID(@PathVariable("id") String id) {
+        produtoRepository.deleteById(id);
+    }
+
     @GetMapping("ola-mundo")
     public String olaMundo() {
         String letra = """
