@@ -36,6 +36,12 @@ public class ProdutoController {
         produtoRepository.deleteById(id);
     }
 
+    @PutMapping("{id}")
+    public void atualizarPorId(@PathVariable("id") String id, @RequestBody Produto produtoAtualizado) {
+        produtoAtualizado.setId(id);
+        produtoRepository.save(produtoAtualizado);
+    }
+
     @GetMapping("ola-mundo")
     public String olaMundo() {
         String letra = """
