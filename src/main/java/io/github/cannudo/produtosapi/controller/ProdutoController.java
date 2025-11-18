@@ -4,6 +4,7 @@ import io.github.cannudo.produtosapi.model.Produto;
 import io.github.cannudo.produtosapi.repository.ProdutoRepository;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -22,6 +23,12 @@ public class ProdutoController {
         produto.setId(id);
         produtoRepository.save(produto);
         return produto;
+    }
+
+    @GetMapping("/{id}")
+    public Produto findByID(@PathVariable("id") String id) {
+        Optional<Produto> produto = produtoRepository.findById(id);
+        return produto.orElse(null);
     }
 
     @GetMapping("ola-mundo")
